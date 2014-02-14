@@ -1,0 +1,9 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+resource disable-about-something-modules modules/
+
+component {a00cbf60-9527-11e3-a5e2-0800200c9a66} components/Blocker.js
+contract @clear-code.com/disable-about-something/blocker;1 {a00cbf60-9527-11e3-a5e2-0800200c9a66}
+category content-policy DisableAboutSomethingBlocker @clear-code.com/disable-about-something/blocker;1
