@@ -57,6 +57,7 @@ DisableAboutSomethingBlocker.prototype = {
       localPart = localPart.split('?')[0];
       if (prefs.getPref(BASE + scheme + '.' + localPart) === false) {
         this.processBlockedContext(aContext);
+        Components.utils.reportError(new Error(ID + ': ' + aContentLocation.spec + ' is blocked!'));
         return this.REJECT_REQUEST;
       }
     }
