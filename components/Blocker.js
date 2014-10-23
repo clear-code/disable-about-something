@@ -71,7 +71,7 @@ DisableAboutSomethingBlocker.prototype = {
 
   processBlockedContext: function (aContext) {
     try {
-      if (aContext instanceof Ci.nsIDOMElement && aContext.localName == 'browser') {
+      if (aContext && aContext.localName == 'browser') {
         aContext.stop();
         let doc = aContext.ownerDocument;
         let chrome = doc.defaultView;
