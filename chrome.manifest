@@ -7,3 +7,7 @@ resource disable-about-something-modules modules/
 component {a00cbf60-9527-11e3-a5e2-0800200c9a66} components/Blocker.js
 contract @clear-code.com/disable-about-something/blocker;1 {a00cbf60-9527-11e3-a5e2-0800200c9a66}
 category content-policy DisableAboutSomethingBlocker @clear-code.com/disable-about-something/blocker;1
+
+component {3ac26e19-e7f2-4541-91c0-2d7bdc1dc4f3} components/Startup.js
+contract @clear-code.com/disable-about-something/startup;1 {3ac26e19-e7f2-4541-91c0-2d7bdc1dc4f3}
+category profile-after-change  DisableAboutSomethingStartupService @clear-code.com/disable-about-something/startup;1
