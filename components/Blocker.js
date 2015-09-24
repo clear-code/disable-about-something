@@ -53,9 +53,9 @@ DisableAboutSomethingBlocker.prototype = {
   shouldLoad: function (aContentType, aContentLocation, aRequestOrigin, aContext, aMimeTypeGuess, aExtra) {
     var scheme = aContentLocation.scheme;
     if (scheme == 'about') {
-      let localPart = aContentLocation.spec.replace(scheme + ':', '');
-      localPart = localPart.split('?')[0];
-      if (prefs.getPref(BASE + scheme + '.' + localPart) === false) {
+      let localPart = aContentLocation.spec.replace(/^about:|\?.*$/g, '');
+      if (localPart != 'blank' &&
+          prefs.getPref(BASE + 'about.' + localPart) === false) {
         this.processBlockedContext(aContext);
         Components.utils.reportError(new Error(ID + ': ' + aContentLocation.spec + ' is blocked!'));
         return this.REJECT_REQUEST;
