@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="disable-about-something@clear-code.com"
                    em:name="Disable About Something"
-                   em:version="1.0"
+                   em:version="1.1"
                    em:description="Provides ability to disable &quot;about:*&quot; pages by the configuration."
                    em:creator="ClearCode Inc."
                    em:homepageURL="http://www.clear-code.com/">
